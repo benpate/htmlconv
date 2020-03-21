@@ -2,6 +2,7 @@ package html
 
 import (
 	"regexp"
+	"strings"
 )
 
 var whitespace *regexp.Regexp
@@ -12,5 +13,9 @@ func init() {
 
 // CollapseWhitespace converts all whitespace characters into a single SPACE character
 func CollapseWhitespace(text string) string {
-	return whitespace.ReplaceAllString(text, " ")
+	result := whitespace.ReplaceAllString(text, " ")
+
+	result = strings.TrimPrefix(result, " ")
+	result = strings.TrimSuffix(result, " ")
+	return result
 }
