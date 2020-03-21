@@ -7,6 +7,18 @@
 
 ## Simple Go (golang) library for manipulating HTML content.  
 
+**FromText(text) html**
+
+**ToText(html) text**
+
+**IsHTML(string) bool**
+
+**RemoveTags(html) string**
+
+**Summary(html) string**
+
+**CollapseWhitespace(string) string**
+
 
 
 ## Pull Requests Welcome
