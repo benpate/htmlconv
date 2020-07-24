@@ -4,6 +4,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/benpate/html?style=flat-square)](https://goreportcard.com/report/github.com/benpate/html)
 [![Build Status](http://img.shields.io/travis/benpate/html.svg?style=flat-square)](https://travis-ci.org/benpate/html)
 [![Codecov](https://img.shields.io/codecov/c/github/benpate/html.svg?style=flat-square)](https://codecov.io/gh/benpate/html)
+![Version](https://img.shields.io/github/v/release/benpate/html?include_prereleases&style=flat-square&color=brightgreen)
 
 ## Simple Go (golang) library for manipulating HTML content.  
 
