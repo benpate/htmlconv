@@ -1,4 +1,4 @@
-module github.com/benpate/html
+module github.com/benpate/htmlconv
 
 go 1.15
 
