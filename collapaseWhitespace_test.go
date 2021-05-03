@@ -3,7 +3,7 @@ package htmlconv
 import (
 	"testing"
 
-	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
 func TestCollapseWhitespace(t *testing.T) {
@@ -13,5 +13,5 @@ func TestCollapseWhitespace(t *testing.T) {
 		This is the second paragraph of the content.
 	`
 
-	assert.Equal(t, "This is the first paragraph of the content. This is the second paragraph of the content.", CollapseWhitespace(content1))
+	require.Equal(t, "This is the first paragraph of the content. This is the second paragraph of the content.", CollapseWhitespace(content1))
 }
