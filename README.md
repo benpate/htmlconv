@@ -1,10 +1,10 @@
 # HTMLConv 🤓
 
-[![GoDoc](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](http://godoc.org/github.com/benpate/html)
-[![Go Report Card](https://goreportcard.com/badge/github.com/benpate/html?style=flat-square)](https://goreportcard.com/report/github.com/benpate/html)
-[![Build Status](http://img.shields.io/travis/benpate/html.svg?style=flat-square)](https://travis-ci.org/benpate/html)
-[![Codecov](https://img.shields.io/codecov/c/github/benpate/html.svg?style=flat-square)](https://codecov.io/gh/benpate/html)
-![Version](https://img.shields.io/github/v/release/benpate/html?include_prereleases&style=flat-square&color=brightgreen)
+[![GoDoc](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](http://godoc.org/github.com/benpate/htmlconv)
+[![Build Status](http://img.shields.io/travis/benpate/htmlconv.svg?style=flat-square)](https://travis-ci.org/benpate/htmlconv)
+[![Codecov](https://img.shields.io/codecov/c/github/benpate/htmlconv.svg?style=flat-square)](https://codecov.io/gh/benpate/htmlconv)
+[![Go Report Card](https://goreportcard.com/badge/github.com/benpate/htmlconv?style=flat-square)](https://goreportcard.com/report/github.com/benpate/htmlconv)
+![Version](https://img.shields.io/github/v/release/benpate/htmlconv?include_prereleases&style=flat-square&color=brightgreen)
 
 ## Simple Go (golang) library for manipulating HTML content.  
 
