@@ -1,7 +1,7 @@
 # HTMLConv 🤓
 
 [![GoDoc](https://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](http://pkg.go.dev/github.com/benpate/htmlconv)
-[![Build Status](https://img.shields.io/github/workflow/status/benpate/htmlconv/Go/master)](https://github.com/benpate/htmlconv/actions/workflows/go.yml)
+[![Build Status](https://img.shields.io/github/workflow/status/benpate/htmlconv/Go/main)](https://github.com/benpate/htmlconv/actions/workflows/go.yml)
 [![Codecov](https://img.shields.io/codecov/c/github/benpate/htmlconv.svg?style=flat-square)](https://codecov.io/gh/benpate/htmlconv)
 [![Go Report Card](https://goreportcard.com/badge/github.com/benpate/htmlconv?style=flat-square)](https://goreportcard.com/report/github.com/benpate/htmlconv)
 [![Version](https://img.shields.io/github/v/release/benpate/htmlconv?include_prereleases&style=flat-square&color=brightgreen)](https://github.com/benpate/htmlconv/releases)
