@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"regexp"
 	"strings"
+	"unicode/utf8"
 )
 
 var findHTML *regexp.Regexp
@@ -111,7 +112,51 @@ func ToText(html string) string {
 	return result
 }
 
-// RemoveTags removes all HTML tags from a string, returning plain text without any formatting.
+// RemoveTags aggressively strips HTML tags from a string.  It will only keep anything between `>` and `<`.
+// From: https://stackoverflow.com/questions/55036156/how-to-replace-all-html-tag-with-empty-string-in-golang
+// Original code by: Daniel Morell <https://stackoverflow.com/users/10463261/daniel-morell>
 func RemoveTags(html string) string {
-	return tags.ReplaceAllLiteralString(html, "")
+
+	const (
+		htmlTagStart = 60 // Unicode `<`
+		htmlTagEnd   = 62 // Unicode `>`
+	)
+
+	// Setup a string builder and allocate enough memory for the new string.
+	var builder strings.Builder
+	builder.Grow(len(html) + utf8.UTFMax)
+
+	in := false // True if we are inside an HTML tag.
+	start := 0  // The index of the previous start tag character `<`
+	end := 0    // The index of the previous end tag character `>`
+
+	for i, c := range html {
+		// If this is the last character and we are not in an HTML tag, save it.
+		if (i+1) == len(html) && end >= start {
+			builder.WriteString(html[end:])
+		}
+
+		// Keep going if the character is not `<` or `>`
+		if c != htmlTagStart && c != htmlTagEnd {
+			continue
+		}
+
+		if c == htmlTagStart {
+			// Only update the start if we are not in a tag.
+			// This make sure we strip out `<<br>` not just `<br>`
+			if !in {
+				start = i
+			}
+			in = true
+
+			// Write the valid string between the close and start of the two tags.
+			builder.WriteString(html[end:start])
+			continue
+		}
+		// else c == htmlTagEnd
+		in = false
+		end = i + 1
+	}
+
+	return builder.String()
 }
